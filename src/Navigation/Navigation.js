@@ -4,6 +4,9 @@ import Home from "../Pages/Home";
 import Features from "../Pages/Features";
 import NavBar from "../Components/NavBar";
 import Pricing from "../Pages/Pricing";
+import Params from "../Components/Params";
+import Lifecycleclass from "../Components/LifeCYcleClass";
+import Lifecyclefunction from "../Components/LifeCycleFunction";
 
 const Navigation = () => {
   return (
@@ -11,9 +14,10 @@ const Navigation = () => {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="features" element={<Features />} />
-          <Route path="pricing" element={<Pricing />} />
+          <Route path="/" element={<Lifecycleclass />} />
+          <Route path="features" element={<Lifecyclefunction />} />
+          <Route exact path="pricing" element={<Pricing />} />
+          <Route path="/pricing/:id" element={<Params />} />
         </Routes>
       </BrowserRouter>
     </div>
